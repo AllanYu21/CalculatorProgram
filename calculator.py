@@ -1,10 +1,13 @@
 def interface():
 	print("My caluclator porgram")
-	print("Option: ")
-	print("9 - Quit")
-	choice = input("Enter your choice: ")
-	if choice == '9':
-		return
+	keep_running = True
+
+	while keep_running:
+		print("Option: ")
+		print("9 - Quit")
+		choice = input("Enter your choice: ")
+		if choice == '9':
+			keep_running = False
 
 
 

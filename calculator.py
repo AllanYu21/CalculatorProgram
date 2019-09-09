@@ -6,6 +6,15 @@ def check_HDL(HDL_result):
 	else:
 		return "low"	
 
+def check_LDL(LDL_result):
+	if LDL_result >= 190:
+		return "Very High"
+	elif 160<=LDL_result<190:
+		return "High"
+	elif 130<=LDL_result<160:
+		return "Borderline high"
+	else:
+		return "Normal"
 
 def cholestroal_interface():
 	print("Cholesterol check")
@@ -14,6 +23,9 @@ def cholestroal_interface():
 	if chol_data[0] == "HDL":
 		result = check_HDL(int(chol_data[1]))
 		print("The result is {}".format(result))
+	elif chol_data[0] == "LDL":
+		result = check_LDL(int(chol_data[1]))
+		print("The result is {}".format(result)) 
 
 
 
@@ -22,6 +34,7 @@ def interface():
 	keep_running = True
 
 	while keep_running:
+		print("")
 		print("Option: ")
 		print("1 - Cholesterol Checks")
 		print("9 - Quit")

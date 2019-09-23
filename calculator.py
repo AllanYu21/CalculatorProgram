@@ -1,5 +1,5 @@
 import json
-my_dict={}
+my_dict={"name":[], "age":[], "result":[]}
 
 def check_HDL(HDL_result):
 	if HDL_result >= 60:
@@ -26,18 +26,18 @@ def cholestroal_interface():
 	if chol_data[0] == "HDL":
 		result = check_HDL(int(chol_data[1]))
 		print("The result is {}".format(result))
-		my_dict["result"] = ("The result is {}".format(result))
+		my_dict["result"].append(("The result is {}".format(result)))
 	elif chol_data[0] == "LDL":
 		result = check_LDL(int(chol_data[1]))
 		print("The result is {}".format(result))
-		my_dict["result"] = ("The result is {}".format(result))
+		my_dict["result"].append(("The result is {}".format(result)))
 
 def patient_interface():
 	print("Patient Input")
 	name = input("Enter patient name: ")
 	age = int(input("Enter patient age: "))
-	my_dict["name"] = name
-	my_dict["age"] = age
+	my_dict["name"].append(name)
+	my_dict["age"].append(age)
 
 
 def upload_JSON():

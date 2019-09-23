@@ -1,1 +1,1 @@
-{"name": "Charlie", "age": 21, "result": "The result is Very High"}
+{"name": ["Bob", "Ryan"], "age": [21, 20], "result": ["The result is Normal", "The result is Borderline low"]}
